@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 function Header() {
     return (
         <header>
-            <h1>Data Structure App</h1>
+            <NavLink to="/"><h1>Data Structure App</h1></NavLink>
             <nav>
                 <ul>
                     <li>

@@ -32,8 +32,8 @@ function Stack({ tryAgain }) {
                 <button className="btn" onClick={pop}>
                     Pop
                 </button>
-                <p>Top Element : {peek()}</p>
-                <p>Stack Size : {length}</p>
+                <p>Top Element : Number {peek()}</p>
+                <p>Stack Length : {length} items</p>
                 <button className="btn" onClick={tryAgain}>Try again</button>
             </div>
         </main>
