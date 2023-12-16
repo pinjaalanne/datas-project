@@ -28,9 +28,9 @@ function Stack({ tryAgain }) {
                         );
                     })}
                 </div>
-                <button className="btn" onClick={addToStack}>Push</button>
+                <button className="btn" onClick={addToStack}>Add</button>
                 <button className="btn" onClick={pop}>
-                    Pop
+                    Remove
                 </button>
                 <p>Top Element : Number {peek()}</p>
                 <p>Stack Length : {length} items</p>
