@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 
-function Palindrome() {
+function Palindrome({ tryAgain }) {
 
     const [input, setInput] = useState("");
 
@@ -20,6 +20,7 @@ function Palindrome() {
                 </form>
                 <p>Is it a Palindrome:</p>
                 <p className="palindromeResult">{isThisPalindrome ? " Yes it is!" : " No it's not!"}</p>
+                <button className="btn" onClick={tryAgain}>Try again</button>
             </div>
         </main>
     );

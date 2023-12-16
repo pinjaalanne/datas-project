@@ -8,6 +8,11 @@ import Root from "./routes/Root";
 
 
 function App() {
+
+  function tryAgain() {
+    window.location.reload();
+  }
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -15,9 +20,9 @@ function App() {
       errorElement: <ErrorPage />,
       children: [
         { path: "/", element: <Home /> },
-        { path: "/palindrome", element: <Palindrome /> },
-        { path: "/bubblesort", element: <BubbleSort /> },
-        { path: "/stack", element: <Stack /> }
+        { path: "/palindrome", element: <Palindrome tryAgain={tryAgain} /> },
+        { path: "/bubblesort", element: <BubbleSort tryAgain={tryAgain} /> },
+        { path: "/stack", element: <Stack tryAgain={tryAgain} /> }
       ],
     },
   ]);

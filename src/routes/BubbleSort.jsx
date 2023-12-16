@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function BubbleSort() {
+function BubbleSort({ tryAgain }) {
     // State for the input value
     const [input, setInput] = useState('');
     // State for the sorted result
@@ -46,10 +46,11 @@ function BubbleSort() {
                     placeholder="Enter numbers"
                 />
                 {/* Button to trigger the sorting */}
-                <button className="bubbleSortBtn" onClick={handleBubbleSort}>Sort</button>
+                <button className="btn" onClick={handleBubbleSort}>Sort</button>
                 {/* Display the sorted result */}
                 <p>Sorted Result: </p>
                 <p className='bubbleResult'>{sortedResult.join(' ')}</p>
+                <button className="btn" onClick={tryAgain}>Try again</button>
             </div>
         </main>
     );

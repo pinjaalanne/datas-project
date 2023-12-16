@@ -24,7 +24,7 @@ body {
 
 main {
   padding: 0;
-  min-height: calc(100vh - 180px);
+  min-height: calc(100vh - 100px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,12 +35,22 @@ h1 {
   font-size: 2.5em;
   line-height: 1.1;
   padding: 0.5rem;
+  text-shadow: 1.5px 1.5px 3px rgba(38, 57, 90, 0.748);
 }
 
 p,
 h2,
 h3 {
   margin: 1rem;
+}
+
+h2,
+h3 {
+  text-shadow: 1.5px 1.5px 3px rgba(38, 57, 90, 0.748);
+}
+
+p {
+  font-weight: 600;
 }
 
 header {
@@ -98,6 +108,10 @@ nav ul li {
   padding: 0.5rem;
 }
 
+nav {
+  margin-right: 2rem;
+}
+
 .homeList {
   list-style: none;
   color: beige;
@@ -144,25 +158,36 @@ nav ul li {
 .palindromeResult {
   background: #ededef;
   color: #42577b;
-  border-radius: 10px;
-  font-size: 1.5rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
   font-weight: 800;
-  padding: 1rem;
+  padding: 0.8rem;
   margin: 0.5rem 0 1rem;
 }
 
-.bubbleSortBtn {
+.btn {
   border: none;
   background: #ededef;
   color: #42577b;
+  font-weight: 600;
   border-radius: 10px;
   font-size: 1rem;
   padding: 0.4rem;
   margin: 0.5rem;
   cursor: pointer;
+  box-shadow: 1.5px 1.5px 3px rgba(38, 57, 90, 0.748);
 }
 
-.bubbleSortBtn:hover {
+.btn:hover {
   background: #42577b;
   color: #ededef;
+}
+
+.stackItem {
+  background: white;
+  border-radius: 80px;
+  width: 200px;
+  color: rgb(65, 91, 130);
+  box-shadow: 1.5px 1.5px 3px rgba(38, 57, 90, 0.748);
+  margin: 0.5rem;
 }
