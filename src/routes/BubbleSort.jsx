@@ -1,13 +1,10 @@
 import { useState } from "react";
 
-function BubbleSort({ tryAgain }) {
-    // State for the input value
+function BubbleSort() {
     const [input, setInput] = useState('');
-    // State for the sorted result
     const [sortedResult, setSortedResult] = useState([]);
 
-    // Function to perform Bubble Sort
-    function bubbleSorting(data) {
+    const bubbleSorting = (data) => {
         // Convert the string to an array of numbers
         const dataArray = data.split('');
         // Create a new array to avoid mutating the state directly
@@ -33,24 +30,25 @@ function BubbleSort({ tryAgain }) {
         bubbleSorting(input);
     };
 
+    const clearInput = () => {
+        setInput('');
+    }
+
     return (
         <main>
             <div>
                 <h2>Bubble Sort</h2>
                 <h3>Sort numbers with Bubble Sort!</h3>
-                {/* Input for entering comma-separated numbers */}
                 <input
                     className="bubbleSortInput"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     placeholder="Enter numbers"
                 />
-                {/* Button to trigger the sorting */}
                 <button className="btn" onClick={handleBubbleSort}>Sort</button>
-                {/* Display the sorted result */}
                 <p>Sorted Result: </p>
                 <p className='bubbleResult'>{sortedResult.join(' ')}</p>
-                <button className="btn" onClick={tryAgain}>Try again</button>
+                <button className="btn" onClick={clearInput}>Try again</button>
             </div>
         </main>
     );

@@ -1,18 +1,24 @@
 import { useRef } from "react";
 import { useStackState } from "rooks";
 
-function Stack({ tryAgain }) {
+function Stack() {
     const numberToPushRef = useRef(3);
+    // using useStackState for the stack
     const [
         list,
         { push, pop, peek, length },
         listInReverse,
     ] = useStackState([1, 2, 3]);
 
-    function addToStack() {
+    // function for adding to the stack with push
+    const addToStack = () => {
         numberToPushRef.current =
             numberToPushRef.current + 1;
         push(numberToPushRef.current);
+    }
+
+    const tryAgain = () => {
+        window.location.reload();
     }
 
     return (
